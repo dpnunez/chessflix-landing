@@ -29,36 +29,6 @@ const GlobalStyle = createGlobalStyle`
 	}
 `;
 
-declare module '@mui/material/styles' {
-  export interface Theme {
-		sizes: {
-			header: string,
-			pageWidth: {
-				desktop: string;
-				mobile?: string;
-				tablet?: string;
-			}
-		},
-		images?: {
-			[key: string]: any
-		}
-  }
-  // allow configuration using `createTheme`
-  export interface ThemeOptions {
-    sizes: {
-			header: string,
-			pageWidth: {
-				desktop: string;
-				mobile?: string;
-				tablet?: string;
-			}
-		},
-		images?: {
-			[key: string]: any
-		}
-  }
-}
-
 export type ThemeMode = 'dark' | 'light'
 
 const getTheme = (mode: ThemeMode = 'light') => createTheme({
