@@ -1,7 +1,11 @@
-import { createTheme, Theme as ThemeReturn } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+	* {
+		transition: color 0.1s, background-color 0.3s;
+	}
+
 	html,
 	body {
 		padding: 0;
@@ -44,9 +48,11 @@ declare module '@mui/material/styles' {
   }
 }
 
-const theme = createTheme({
+export type ThemeMode = 'dark' | 'light'
+
+const getTheme = (mode: ThemeMode = 'light') => createTheme({
   palette: {
-    mode: 'dark',
+    mode,
     primary: {
       main: '#FE9A22',
       light: '#FFC278',
@@ -70,4 +76,4 @@ const theme = createTheme({
   },
 });
 
-export { theme, GlobalStyle };
+export { getTheme, GlobalStyle };

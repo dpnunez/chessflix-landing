@@ -9,7 +9,16 @@ const Container = styled.header<ContainerProps>`
 	width: 100vw;
 	height: ${({ theme }) => theme.sizes.header};
 	transition: background-color 0.25s ease;
-	background-color: ${({ contained }) => (contained ? 'red' : 'transparent')};
+	background-color: ${({ theme, contained }) => {
+    if (contained) return theme.palette.mode === 'dark' ? 'rgba(20,20,20,.8)' : 'rgba(255,255,255,.8)';
+    return 'unset';
+  }};
+	backdrop-filter: saturate(180%) blur(5px);
+
+	.divider {
+		transition: opacity 0.2s ease;
+		opacity: ${({ contained }) => (contained ? 1 : 0)};
+	}
 
 	.content {
 		width: 100%;

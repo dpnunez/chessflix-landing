@@ -1,9 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, FC } from 'react';
 
-import { Button, Typography } from '@mui/material';
+import { Button, Divider, Typography } from '@mui/material';
 import { Container } from './styles';
 
-const Header = () => {
+interface HeaderProps {
+	handleMode: () => void
+}
+
+const Header: FC<HeaderProps> = ({ handleMode }) => {
   const [containedHeader, setContainedHeader] = useState(false);
 
   useEffect(() => {
@@ -31,9 +35,10 @@ const Header = () => {
           <li>Contato</li>
         </ul>
         <div className="actions">
-          <Button>Login</Button>
+          <Button onClick={handleMode}>Login</Button>
         </div>
       </div>
+      <Divider className="divider" />
     </Container>
   );
 };

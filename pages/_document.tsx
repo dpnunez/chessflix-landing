@@ -3,7 +3,7 @@ import Document, {
   Html, Head, Main, NextScript,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import { theme } from 'theme';
+import { getTheme } from 'theme';
 
 // https://mui.com/styles/advanced/#next-js
 export default class MyDocument extends Document {
@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {/* PWA primary color */}
-          <meta content={theme.palette.primary.main} name="theme-color" />
+          <meta content={getTheme().palette.primary.main} name="theme-color" />
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
             rel="stylesheet"
