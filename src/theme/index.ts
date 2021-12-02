@@ -22,6 +22,11 @@ const GlobalStyle = createGlobalStyle`
 	* {
 		box-sizing: border-box;
 	}
+
+	.MuiButtonBase-root {
+		text-transform: none !important;
+		font-size: 16px !important;
+	}
 `;
 
 declare module '@mui/material/styles' {
@@ -65,6 +70,9 @@ const getTheme = (mode: ThemeMode = 'light') => createTheme({
       dark: '#c46c00',
       contrastText: '#fff',
     },
+  },
+  typography: {
+    fontFamily: 'Inter',
   },
   sizes: {
     header: '72px',
