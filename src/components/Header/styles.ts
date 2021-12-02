@@ -5,6 +5,7 @@ interface ContainerProps {
 }
 
 const Container = styled.header<ContainerProps>`
+	
 	position: fixed;
 	width: 100vw;
 	height: ${({ theme }) => theme.sizes.header};
@@ -21,6 +22,7 @@ const Container = styled.header<ContainerProps>`
 	}
 
 	.content {
+		padding: 0 1rem;
 		width: 100%;
 		max-width: ${({ theme }) => theme.sizes.pageWidth.desktop};
 		margin: 0 auto;
@@ -35,8 +37,12 @@ const Container = styled.header<ContainerProps>`
 			grid-area: logo;
 			display: flex;
 			align-items: center;
-			h2 {
-				margin: auto 0;
+			position: relative;
+			
+			.logo-container {
+				position: relative;
+				height: 65%;
+				aspect-ratio: 7/2;
 			}
 		}
 		.menu {
@@ -55,6 +61,30 @@ const Container = styled.header<ContainerProps>`
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
+
+			.menu-icon {
+				display: none;
+			}
+		}
+
+		/* Mobile styles */
+
+		${({ theme }) => theme.breakpoints.down('md')} {
+			grid-template-areas: 
+				"logo actions";
+			grid-template-columns: 1fr 1fr;
+			
+
+			.menu {
+				display: none;
+			}
+
+			.actions .menu-icon {
+				display: inline-flex;
+			}
+			.login-button {
+				display: none;
+			}
 		}
 	}
 `;

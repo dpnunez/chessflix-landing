@@ -34,6 +34,9 @@ declare module '@mui/material/styles' {
 				tablet?: string;
 			}
 		},
+		images?: {
+			[key: string]: any
+		}
   }
   // allow configuration using `createTheme`
   export interface ThemeOptions {
@@ -45,6 +48,9 @@ declare module '@mui/material/styles' {
 				tablet?: string;
 			}
 		},
+		images?: {
+			[key: string]: any
+		}
   }
 }
 
@@ -63,7 +69,7 @@ const getTheme = (mode: ThemeMode = 'light') => createTheme({
   sizes: {
     header: '72px',
     pageWidth: {
-      desktop: '1110px',
+      desktop: '1235px',
     },
   },
   components: {
