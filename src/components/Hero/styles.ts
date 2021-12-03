@@ -65,6 +65,27 @@ const Container = styled.div`
 				background-color: ${({ theme }) => alpha(theme.palette.primary.main, 0.45)};
 			}
 		}
+
+		${({ theme }) => theme.breakpoints.down('md')} {
+			grid-template-areas: 
+				"text";
+			grid-template-columns: 1fr; 
+			
+			.asset {
+				display: none;
+			}
+
+			.text {
+				align-items: center;
+				.title {
+					font-size: 3rem;
+				}
+				.title, .subtitle  {
+					text-align: center;
+				}
+			}
+
+		}
 	}
 `;
 

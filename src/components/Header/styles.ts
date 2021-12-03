@@ -8,6 +8,7 @@ const Container = styled.header<ContainerProps>`
 	z-index: 2;
 	position: fixed;
 	width: 100vw;
+	overflow: hidden;
 	height: ${({ theme }) => theme.sizes.header};
 	transition: background-color 0.25s ease;
 	background-color: ${({ theme, contained }) => {

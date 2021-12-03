@@ -7,9 +7,9 @@ const Hero = () => {
   const videoContainerRef = useRef<HTMLDivElement>(null);
 
   const updateTransform = (rawX: number, rawY: number) => {
-    const [x, y] = [(rawX / 100) - 20, (rawY / 100) - 10];
+    const [x, y] = [(rawX / 100) - 20, (rawY / 100)];
 
-    if (videoContainerRef?.current?.style) { videoContainerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`; }
+    if (videoContainerRef?.current?.style) { videoContainerRef.current.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`; }
   };
 
   const handleMove = (event: MouseEvent) => {
