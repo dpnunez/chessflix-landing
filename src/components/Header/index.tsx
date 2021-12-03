@@ -33,7 +33,6 @@ const Header: FC<HeaderProps> = ({ handleMode }) => {
         <div className="content">
           <div className="logo">
             <div className="logo-container">
-              {/* <Typography variant="h5">ChessFlix</Typography> */}
               <Image src="/logo.png" alt="chessflix logo" layout="fill" />
             </div>
           </div>
