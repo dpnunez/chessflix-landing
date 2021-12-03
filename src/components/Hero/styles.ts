@@ -32,7 +32,7 @@ const Container = styled.div`
 			justify-content: center;
 
 			.title {
-				font-size: 5.3rem;
+				font-size: 5rem;
 				font-weight: 800;
 			}
 
@@ -47,6 +47,14 @@ const Container = styled.div`
 			flex-direction: column;
 			align-items: flex-end;
 			justify-content: center;
+			perspective: 500px;
+
+			.video-container {
+				pointer-events: none;
+				z-index: 2;
+				transform: rotateY(348deg);
+				/* transition: transform 0.2s; */
+			}
 
 			.circle {
 				position: absolute;
