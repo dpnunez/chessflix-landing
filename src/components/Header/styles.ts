@@ -8,7 +8,6 @@ const Container = styled.header<ContainerProps>`
 	z-index: 2;
 	position: fixed;
 	width: 100vw;
-	overflow: hidden;
 	height: ${({ theme }) => theme.sizes.header};
 	transition: background-color 0.25s ease;
 	background-color: ${({ theme, contained }) => {
@@ -19,12 +18,10 @@ const Container = styled.header<ContainerProps>`
 
 	.divider {
 		transition: opacity 0.2s ease;
-		opacity: ${({ contained }) => (contained ? 1 : 0)};
 	}
 
 	.content {
 		padding: 0 1rem;
-		width: 100%;
 		max-width: ${({ theme }) => theme.sizes.pageWidth.desktop};
 		margin: 0 auto;
 		height: 100%;

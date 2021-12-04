@@ -1,9 +1,11 @@
-import { Hero } from 'components';
+import { Hero, Teachers } from 'components';
+import { Container } from 'styles/home';
 
 const Home = () => (
-  <main>
+  <Container>
     <Hero />
-  </main>
+    <Teachers />
+  </Container>
 );
 
 export default Home;
