@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 const Container = styled.section`
 	padding: 0 1rem;
+	max-width: ${({ theme }) => theme.sizes.pageWidth.desktop};
+	width: 100%;
+	margin: auto;
 
 	.section-title {
 		font-weight: 800;
