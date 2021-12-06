@@ -1,41 +1,50 @@
-import { useEffect, useState } from 'react';
 import {
   Instagram, YouTube, People, EmojiEvents,
 } from '@mui/icons-material';
+import { Typography } from '@mui/material';
 import { Container, Social } from './styles';
 
-const Socials = () => {
-  const [count, setCount] = useState(false);
+const formater = Intl.NumberFormat('en', { notation: 'compact' });
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setCount(true);
-        }
-      });
-    });
-
-    const element = document.querySelector('.socials-wrapper');
-    if (element) { observer.observe(element); }
-  }, []);
-
-  return (
-    <Container className="socials-wrapper">
-      <Social value={23800} count={count} className="social">
-        <Instagram />
-      </Social>
-      <Social value={88200} count={count} className="social">
-        <YouTube />
-      </Social>
-      <Social value={3146} count={count} className="social">
+const Socials = () => (
+  <Container className="socials-wrapper">
+    <Social className="social">
+      <Typography className="value" variant="h3">
+        {formater.format(23800)}
+      </Typography>
+      <a href="www.google.com" target="_blank">
+        <Instagram className="insta" />
+        Seguidores no Instagram
+      </a>
+    </Social>
+    <Social className="social">
+      <Typography className="value" variant="h3">
+        {formater.format(88200)}
+      </Typography>
+      <a href="www.google.com" target="_blank">
+        <YouTube className="yout" />
+        Inscritos no youtube
+      </a>
+    </Social>
+    <Social className="social">
+      <Typography className="value" variant="h3">
+        {formater.format(3146)}
+      </Typography>
+      <div>
         <People />
-      </Social>
-      <Social value={5} count={count} className="social">
+        Alunos
+      </div>
+    </Social>
+    <Social className="social">
+      <Typography className="value" variant="h3">
+        {formater.format(5)}
+      </Typography>
+      <div>
         <EmojiEvents />
-      </Social>
-    </Container>
-  );
-};
+        Torneios
+      </div>
+    </Social>
+  </Container>
+);
 
 export { Socials };
