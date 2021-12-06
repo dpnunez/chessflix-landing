@@ -24,4 +24,93 @@ export const teachers: TeacherType[] = [
       twitch: 'https://www.google.com/',
     },
   },
+  {
+    name: 'GM Evandro',
+    image: 'https://chessflix.com.br/wp-content/uploads/2021/05/gm-evandro.jpg',
+    title: 'Grande Mestre',
+    socials: {
+      facebook: 'https://www.google.com/',
+      twitter: 'https://www.google.com/',
+      youtube: 'https://www.google.com/',
+      instagram: 'https://www.google.com/',
+      twitch: 'https://www.google.com/',
+    },
+  }, {
+    name: 'GM Evandro',
+    image: 'https://chessflix.com.br/wp-content/uploads/2021/05/gm-evandro.jpg',
+    title: 'Grande Mestre',
+    socials: {
+      facebook: 'https://www.google.com/',
+      twitter: 'https://www.google.com/',
+      youtube: 'https://www.google.com/',
+      instagram: 'https://www.google.com/',
+      twitch: 'https://www.google.com/',
+    },
+  }, {
+    name: 'GM Evandro',
+    image: 'https://chessflix.com.br/wp-content/uploads/2021/05/gm-evandro.jpg',
+    title: 'Grande Mestre',
+    socials: {
+      facebook: 'https://www.google.com/',
+      twitter: 'https://www.google.com/',
+      youtube: 'https://www.google.com/',
+      instagram: 'https://www.google.com/',
+      twitch: 'https://www.google.com/',
+    },
+  }, {
+    name: 'GM Evandro',
+    image: 'https://chessflix.com.br/wp-content/uploads/2021/05/gm-evandro.jpg',
+    title: 'Grande Mestre',
+    socials: {
+      facebook: 'https://www.google.com/',
+      twitter: 'https://www.google.com/',
+      youtube: 'https://www.google.com/',
+      instagram: 'https://www.google.com/',
+      twitch: 'https://www.google.com/',
+    },
+  }, {
+    name: 'GM Evandro',
+    image: 'https://chessflix.com.br/wp-content/uploads/2021/05/gm-evandro.jpg',
+    title: 'Grande Mestre',
+    socials: {
+      facebook: 'https://www.google.com/',
+      twitter: 'https://www.google.com/',
+      youtube: 'https://www.google.com/',
+      instagram: 'https://www.google.com/',
+      twitch: 'https://www.google.com/',
+    },
+  }, {
+    name: 'GM Evandro',
+    image: 'https://chessflix.com.br/wp-content/uploads/2021/05/gm-evandro.jpg',
+    title: 'Grande Mestre',
+    socials: {
+      facebook: 'https://www.google.com/',
+      twitter: 'https://www.google.com/',
+      youtube: 'https://www.google.com/',
+      instagram: 'https://www.google.com/',
+      twitch: 'https://www.google.com/',
+    },
+  }, {
+    name: 'GM Evandro',
+    image: 'https://chessflix.com.br/wp-content/uploads/2021/05/gm-evandro.jpg',
+    title: 'Grande Mestre',
+    socials: {
+      facebook: 'https://www.google.com/',
+      twitter: 'https://www.google.com/',
+      youtube: 'https://www.google.com/',
+      instagram: 'https://www.google.com/',
+      twitch: 'https://www.google.com/',
+    },
+  }, {
+    name: 'GM Evandro',
+    image: 'https://chessflix.com.br/wp-content/uploads/2021/05/gm-evandro.jpg',
+    title: 'Grande Mestre',
+    socials: {
+      facebook: 'https://www.google.com/',
+      twitter: 'https://www.google.com/',
+      youtube: 'https://www.google.com/',
+      instagram: 'https://www.google.com/',
+      twitch: 'https://www.google.com/',
+    },
+  },
 ];

@@ -20,8 +20,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <>
       <GlobalStyle />
       <MuiThemeProvider theme={theme}>
-        <CssBaseline />
         <ThemeProvider theme={theme}>
+          <CssBaseline />
           <Header handleMode={handleThemeMode} />
           <Component {...pageProps} />
         </ThemeProvider>
@@ -29,4 +29,5 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     </>
   );
 };
+
 export default MyApp;

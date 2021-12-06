@@ -2,14 +2,12 @@ import { Paper } from '@mui/material';
 import styled from 'styled-components';
 
 const Container = styled.section`
-	overflow: hidden;
+	padding: 0 1rem;
 
 	.section-title {
 		font-weight: 800;
 	}
 
-	.grid-container {
-	}
 
 `;
 

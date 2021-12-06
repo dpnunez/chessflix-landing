@@ -8,9 +8,9 @@ import { Container, Card } from './styles';
 const Teachers = () => (
   <Container>
     <Typography variant="h2" className="section-title">Nossos professores</Typography>
-    <Grid container spacing={4} width="100%" mt="1rem" className="grid-container">
+    <Grid container spacing={4} mt="1rem" className="grid-container">
       {teachers.map((teacher) => (
-        <Grid item key={teacher.name} xs={4}>
+        <Grid item key={teacher.name} xs={12} md={6} lg={4}>
           <Card image={teacher.image} elevation={12}>
             <Typography variant="h3" className="name">{teacher.name}</Typography>
             <Typography variant="h4" className="title">{teacher.title}</Typography>
