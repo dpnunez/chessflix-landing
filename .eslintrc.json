@@ -7,7 +7,9 @@
         "plugin:react/recommended",
         "airbnb",
 				"next",
-				"next/core-web-vitals"
+				"next/core-web-vitals",
+				"plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {

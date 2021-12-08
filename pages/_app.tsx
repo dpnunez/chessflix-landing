@@ -7,6 +7,7 @@ import { getTheme, GlobalStyle, ThemeMode } from 'theme';
 
 import { Header } from 'components';
 import { useCallback, useMemo, useState } from 'react';
+import 'styles/shared-layout.css';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [themeMode, setThemeMode] = useState<ThemeMode>('light');

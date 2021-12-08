@@ -1,4 +1,6 @@
-import { Hero, Teachers, Socials } from 'components';
+import {
+  Hero, Teachers, Socials, Popular,
+} from 'components';
 import { Container } from 'styles/home';
 
 const Home = () => (
@@ -6,6 +8,7 @@ const Home = () => (
     <Hero />
     <Teachers />
     <Socials />
+    <Popular />
   </Container>
 );
 
