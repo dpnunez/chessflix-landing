@@ -3,11 +3,13 @@ import { useState, FC } from 'react';
 import { Container, ListContainer } from './styles';
 import { Card } from './Card';
 import { Item } from './Item';
+import { Typography } from '@mui/material';
 
 interface videoType {
 	name: string,
 	id: number,
 	thumb: string,
+	author: string,
 	area: 'main' | 'up' | 'down'
 }
 
@@ -16,17 +18,20 @@ interface ListProps {
 }
 
 const foo: videoType[] = [{
-  name: 'lorem',
+  name: 'Entendendo as estruturas de peões',
+	author: 'Evandro Barbosa',
   id: 1,
   thumb: 'https://images.unsplash.com/photo-1558637845-c8b7ead71a3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8MTYlM0E5fGVufDB8fDB8fA%3D%3D&w=1000&q=80',
   area: 'main',
 }, {
-  name: 'ipsum',
+  name: 'Mago de Riga',
+	author: 'Luis Paulo Supi',
   id: 2,
   thumb: 'https://images.unsplash.com/photo-1558637845-c8b7ead71a3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8MTYlM0E5fGVufDB8fDB8fA%3D%3D&w=1000&q=80',
   area: 'up',
 }, {
-  name: 'dolor',
+  name: 'Introdução ao ataque',
+	author: 'GM Yago',
   id: 3,
   thumb: 'https://images.unsplash.com/photo-1558637845-c8b7ead71a3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8MTYlM0E5fGVufDB8fDB8fA%3D%3D&w=1000&q=80',
   area: 'down',
@@ -43,6 +48,7 @@ const Popular = () => {
 
   return (
     <Container>
+			<Typography variant="h2" fontWeight="800" mb="32px">Cursos Populares</Typography>
       <AnimateSharedLayout>
         <List handleSelected={setSelectedId} />
         <AnimatePresence>

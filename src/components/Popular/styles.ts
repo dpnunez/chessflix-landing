@@ -4,6 +4,7 @@ const Container = styled.div`
 	width: 100%;
 	max-width: ${({ theme }) => theme.sizes.pageWidth.desktop};
 	margin: auto;
+	padding: 0 1rem;
 `;
 
 const CardContainer = styled.li<{ area: string }>`
@@ -11,12 +12,16 @@ const CardContainer = styled.li<{ area: string }>`
 	aspect-ratio: 16/9;
 	height: 100%;
 	grid-area: ${({ area }) => area};
+	cursor: pointer;
 
 	.card-image-container {
 		${({ area }) => area === 'main' && css`
 			height: 500px;
 		`};
 	}
+
+	color: white;
+	font-weight: 800;
 `;
 
 const ListContainer = styled.ul`

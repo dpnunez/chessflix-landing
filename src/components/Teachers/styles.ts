@@ -10,8 +10,6 @@ const Container = styled.section`
 	.section-title {
 		font-weight: 800;
 	}
-
-
 `;
 
 const Card = styled(Paper)<{ image: string }>`
