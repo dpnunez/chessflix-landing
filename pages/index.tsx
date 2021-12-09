@@ -1,5 +1,5 @@
 import {
-  Hero, Teachers, Socials, Popular,
+  Hero, Teachers, Socials, Popular, Experience,
 } from 'components';
 import { Container } from 'styles/home';
 
@@ -9,6 +9,7 @@ const Home = () => (
     <Teachers />
     <Socials />
     <Popular />
+		<Experience />
   </Container>
 );
 
