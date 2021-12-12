@@ -35,7 +35,7 @@ const ListContainer = styled.ul`
 	width: ${({ theme }) => theme.sizes.pageWidth.desktop};
 	max-width: 100%;
 
-	${({ theme }) => theme.breakpoints.down('lg') } {
+	${({ theme }) => theme.breakpoints.down('lg')} {
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 1fr 1fr; 
 

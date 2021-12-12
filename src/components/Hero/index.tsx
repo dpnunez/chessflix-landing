@@ -1,25 +1,67 @@
-import { useRef, MouseEvent } from 'react';
+import { useRef, MouseEvent, useState } from 'react';
 import { Typography, Button } from '@mui/material';
 import ReactPlayer from 'react-player/youtube';
 import { Container } from './styles';
 
 const Hero = () => {
   const videoContainerRef = useRef<HTMLDivElement>(null);
+  const [fixingPosition, setFixingPosition] = useState<Boolean>(false);
 
-  const updateTransform = (rawX: number, rawY: number) => {
-    const [x, y] = [(rawX / 100) - 20, (rawY / 100)];
-
+  const updateTransform = (x: number, y: number) => {
     if (videoContainerRef?.current?.style) { videoContainerRef.current.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`; }
   };
 
+  const updateTransition = (time: number = 0) => {
+    if (videoContainerRef?.current?.style) {
+      if (time) {
+        videoContainerRef.current.style.transition = `transform ${time}ms ease`;
+        videoContainerRef.current.style.transform = 'rotateY(0deg);';
+        return;
+      }
+      videoContainerRef.current.style.transition = 'unset';
+    }
+  };
+
   const handleMove = (event: MouseEvent) => {
-    const [x, y] = [event.clientX, event.clientY];
-    window.requestAnimationFrame(() => updateTransform(x, y));
+    const [x, y] = [(event.clientX / 100) - 20, (event.clientY / 100)];
+    if (!fixingPosition) {
+      window.requestAnimationFrame(() => updateTransform(x, y));
+    }
+  };
+
+  const handleMouseOn = (event: MouseEvent) => {
+    const [x, y] = [(event.clientX / 100) - 20, (event.clientY / 100)];
+    setFixingPosition(true);
+    window.requestAnimationFrame(() => {
+      updateTransition(200);
+      updateTransform(x, y);
+    });
+    setTimeout(() => {
+      window.requestAnimationFrame(() => updateTransition(0));
+      setFixingPosition(false);
+    }, 100);
+  };
+
+  const handleMouseOut = () => {
+    setFixingPosition(true);
+    window.requestAnimationFrame(() => {
+      updateTransition(200);
+      updateTransform(-10, 0);
+    });
+
+    setTimeout(() => {
+      setFixingPosition(false);
+    }, 100);
   };
 
   return (
-    <Container onMouseMove={handleMove}>
-      <div className="content">
+    <Container>
+      <div
+        className="content"
+        onMouseMove={handleMove}
+        onMouseEnter={handleMouseOn}
+        onMouseLeave={handleMouseOut}
+      >
         <div className="text">
           <Typography variant="h1" className="title">
             Alcançe o próximo nível

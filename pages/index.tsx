@@ -9,7 +9,7 @@ const Home = () => (
     <Teachers />
     <Socials />
     <Popular />
-		<Experience />
+    <Experience />
   </Container>
 );
 

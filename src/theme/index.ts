@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
 
 export type ThemeMode = 'dark' | 'light'
 
-const getTheme = (mode: ThemeMode = 'light') => createTheme({
+const getTheme = (mode: ThemeMode = 'dark') => createTheme({
   palette: {
     mode,
     primary: {

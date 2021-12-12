@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
-import { CardContainer } from './styles';
 import { Typography } from '@mui/material';
+import { CardContainer } from './styles';
 
 interface CardProps {
 	id: number;
@@ -12,7 +12,7 @@ interface CardProps {
 	author: string,
 }
 const Card: FC<CardProps> = ({
-  id, name, thumb, handleChange, area, author
+  id, name, thumb, handleChange, area, author,
 }) => (
   <CardContainer onClick={() => handleChange(id)} className="card" area={area}>
     <div className="card-content-container">
@@ -27,12 +27,12 @@ const Card: FC<CardProps> = ({
           className="title-container"
           layoutId={`title-container-${id}`}
         >
-					<Typography variant="h2" className="course-title">
-          	{name}
-					</Typography>
-					<span className="author">
-						{author}
-					</span>
+          <Typography variant="h2" className="course-title">
+            {name}
+          </Typography>
+          <span className="author">
+            {author}
+          </span>
         </motion.div>
       </motion.div>
     </div>

@@ -1,8 +1,11 @@
 import { useEffect, useState, FC } from 'react';
-
-import { Button, Divider, IconButton } from '@mui/material';
 import Image from 'next/image';
+
+import {
+  Button, Divider, IconButton, useTheme,
+} from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
+import { NightModeSwitch } from './SwitchNightMode';
 import { Container } from './styles';
 import { MobileMenu } from './MobileMenu';
 
@@ -13,6 +16,9 @@ interface HeaderProps {
 const Header: FC<HeaderProps> = ({ handleMode }) => {
   const [backgroundHeader, setBackgroundHeader] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const theme = useTheme();
+
+  const isNightMode = theme.palette.mode === 'dark';
 
   const handleMobileMenu = () => setMobileMenuOpen((e) => !e);
 
@@ -44,6 +50,7 @@ const Header: FC<HeaderProps> = ({ handleMode }) => {
             <li>Contato</li>
           </ul>
           <div className="actions">
+            <NightModeSwitch onClick={handleMode} checked={isNightMode} />
             <Button onClick={handleMode} className="login-button">Login</Button>
             <IconButton className="menu-icon" onClick={handleMobileMenu}>
               <MenuIcon />

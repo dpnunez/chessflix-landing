@@ -10,7 +10,7 @@ import { useCallback, useMemo, useState } from 'react';
 import 'styles/shared-layout.css';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  const [themeMode, setThemeMode] = useState<ThemeMode>('light');
+  const [themeMode, setThemeMode] = useState<ThemeMode>('dark');
 
   const theme = useMemo(() => getTheme(themeMode), [themeMode]);
   const handleThemeMode = useCallback(() => {
