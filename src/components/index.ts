@@ -7,3 +7,4 @@ export * from './Experience';
 export * from './Footer';
 export * from './SectionContainer';
 export * from './SideModal';
+export * from './Contact';

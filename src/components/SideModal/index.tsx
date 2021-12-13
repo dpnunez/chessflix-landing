@@ -34,6 +34,7 @@ const SideModal: React.FC<{
         onClick={() => setIsActive(false)}
       />
       <SidekickBody
+        initial={sidekickBodyStyles.inactive}
         width={width}
         drag="x"
         // dragElastic={0.1}

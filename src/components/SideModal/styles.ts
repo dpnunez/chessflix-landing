@@ -31,6 +31,7 @@ const SidekickBody = styled(motion.div)<{ width: number }>`
   max-width: ${({ width }) => `${width}px`};
   position: relative;
   box-sizing: border-box;
+	transform: translateX(-200px) translateZ(0px);
 `;
 
 export { SidekickBody, SidekickOverlay, SidekickWrapper };

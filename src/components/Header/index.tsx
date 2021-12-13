@@ -58,7 +58,12 @@ const Header: FC<HeaderProps> = ({ handleMode }) => {
               </a>
             </li>
             <li>Torneio</li>
-            <li>Contato</li>
+            <li>
+              <a href="#contato">
+                Contato
+              </a>
+
+            </li>
           </ul>
           <div className="actions">
             <NightModeSwitch onClick={handleMode} checked={isNightMode} />
