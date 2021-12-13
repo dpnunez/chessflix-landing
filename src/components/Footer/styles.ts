@@ -31,7 +31,17 @@ const Container = styled.footer`
 			justify-content: flex-end;
 		}
 
-		
+		${({ theme }) => theme.breakpoints.down('md')} {
+			display: flex;
+			flex-direction: column;
+
+			.socials {
+				justify-content: center;
+			}
+			.copyright {
+				justify-content: center;
+			}
+		}
 	}
 `;
 

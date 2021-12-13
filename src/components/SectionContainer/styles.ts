@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
-const SectionContainer = styled.section`
+const Container = styled.section`
 	width: 100%;
 	max-width: ${({ theme }) => theme.sizes.pageWidth.desktop};
 	padding: 0 1rem;
 	margin: auto;
+
+	.title {
+		margin-bottom: 42px;
+	}
 `;
 
-export { SectionContainer };
+export { Container };

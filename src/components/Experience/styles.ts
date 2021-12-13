@@ -1,12 +1,11 @@
-import { SectionContainer } from 'components/BaseSectionContainer';
 import styled from 'styled-components';
+import { SectionContainer } from '../SectionContainer';
 
 const Container = styled(SectionContainer)`
 	margin-top: 13rem !important;
 	padding-bottom: 2rem !important;
 	
 	.content { 
-		margin-top: 3rem;
 		display: grid; 
 		grid-template-columns: 1fr 1fr; 
 		grid-template-rows: 1fr; 

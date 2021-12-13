@@ -3,17 +3,17 @@ import {
 } from '@mui/material';
 import { teachers } from 'constantsProject';
 import { Facebook as FacebookIcon, YouTube as YoutubeIcon, Instagram as InstagramIcon } from '@mui/icons-material';
-import { Container, Card } from './styles';
+import { Card } from './styles';
+import { SectionContainer as Container } from '../SectionContainer';
 
 const Teachers = () => (
-  <Container>
-    <Typography variant="h2" className="section-title">Nossos professores</Typography>
-    <Grid container spacing={4} mt="1rem" className="grid-container">
+  <Container title="Nossos professores">
+    <Grid container spacing={4} className="grid-container">
       {teachers.map((teacher) => (
         <Grid item key={teacher.name} xs={12} md={6} lg={4}>
           <Card image={teacher.image} elevation={12}>
             <Typography variant="h3" className="name">{teacher.name}</Typography>
-            <Typography variant="h4" className="title">{teacher.title}</Typography>
+            <Typography variant="h4" className="teacher-title">{teacher.title}</Typography>
             <Divider className="divider" />
             <div className="socials">
               {teacher.socials?.facebook && (

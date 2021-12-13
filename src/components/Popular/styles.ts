@@ -1,12 +1,5 @@
 import styled, { css } from 'styled-components';
 
-const Container = styled.div`
-	width: 100%;
-	max-width: ${({ theme }) => theme.sizes.pageWidth.desktop};
-	margin: auto;
-	padding: 0 1rem;
-`;
-
 const CardContainer = styled.li<{ area: string }>`
 	width: 100%;
 	aspect-ratio: 16/9;
@@ -62,6 +55,4 @@ const ItemContainer = styled.div<{ area?: 'main' | 'up' | 'down' }>`
 
 `;
 
-export {
-  Container, CardContainer, ListContainer, ItemContainer,
-};
+export { CardContainer, ListContainer, ItemContainer };

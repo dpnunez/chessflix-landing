@@ -1,7 +1,9 @@
 import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 import { useState, FC } from 'react';
 import { Typography } from '@mui/material';
-import { Container, ListContainer } from './styles';
+import { SectionContainer as Container } from '../SectionContainer';
+import { ListContainer } from './styles';
+
 import { Card } from './Card';
 import { Item } from './Item';
 
@@ -47,8 +49,7 @@ const Popular = () => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
 
   return (
-    <Container>
-      <Typography variant="h2" fontWeight="800" mb="32px">Cursos Populares</Typography>
+    <Container title="Cursos Populares">
       <AnimateSharedLayout>
         <List handleSelected={setSelectedId} />
         <AnimatePresence>

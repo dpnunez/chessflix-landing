@@ -1,17 +1,6 @@
 import { Paper } from '@mui/material';
 import styled from 'styled-components';
 
-const Container = styled.section`
-	padding: 0 1rem;
-	max-width: ${({ theme }) => theme.sizes.pageWidth.desktop};
-	width: 100%;
-	margin: auto;
-
-	.section-title {
-		font-weight: 800;
-	}
-`;
-
 const Card = styled(Paper)<{ image: string }>`
 	width: 100%;
 	aspect-ratio: 804 / 961;
@@ -33,7 +22,7 @@ const Card = styled(Paper)<{ image: string }>`
 		font-size: 2rem;
 	}
 
-	.title {
+	.teacher-title {
 		font-size: 1rem;
 	}
 
@@ -66,4 +55,4 @@ const Card = styled(Paper)<{ image: string }>`
 	
 `;
 
-export { Container, Card };
+export { Card };
