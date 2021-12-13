@@ -1,6 +1,7 @@
 import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
-import { useState, FC } from 'react';
-import { Typography } from '@mui/material';
+import {
+  useState, FC, Dispatch, SetStateAction,
+} from 'react';
 import { SectionContainer as Container } from '../SectionContainer';
 import { ListContainer } from './styles';
 
@@ -16,7 +17,7 @@ interface videoType {
 }
 
 interface ListProps {
-	handleSelected: (arg0: number | null) => void;
+	handleSelected: Dispatch<SetStateAction<number | null>>
 }
 
 const foo: videoType[] = [{
@@ -49,7 +50,7 @@ const Popular = () => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
 
   return (
-    <Container title="Cursos Populares">
+    <Container title="Cursos Populares" id="cursos">
       <AnimateSharedLayout>
         <List handleSelected={setSelectedId} />
         <AnimatePresence>

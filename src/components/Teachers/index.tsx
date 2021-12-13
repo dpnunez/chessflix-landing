@@ -7,7 +7,7 @@ import { Card } from './styles';
 import { SectionContainer as Container } from '../SectionContainer';
 
 const Teachers = () => (
-  <Container title="Nossos professores">
+  <Container title="Nossos professores" id="treinadores">
     <Grid container spacing={4} className="grid-container">
       {teachers.map((teacher) => (
         <Grid item key={teacher.name} xs={12} md={6} lg={4}>

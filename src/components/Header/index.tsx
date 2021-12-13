@@ -8,6 +8,7 @@ import { Menu as MenuIcon } from '@mui/icons-material';
 import { NightModeSwitch } from './SwitchNightMode';
 import { Container } from './styles';
 import { MobileMenu } from './MobileMenu';
+// import { SideModal } from '../SideModal';
 
 interface HeaderProps {
 	handleMode: () => void
@@ -43,9 +44,19 @@ const Header: FC<HeaderProps> = ({ handleMode }) => {
             </div>
           </div>
           <ul className="menu">
-            <li>Início</li>
-            <li>Treinadores</li>
-            <li>Nossos Cursos</li>
+            <li>
+              <a href="#inicio">Início</a>
+            </li>
+            <li>
+              <a href="#treinadores">
+                Treinadores
+              </a>
+            </li>
+            <li>
+              <a href="#cursos">
+                Nossos Cursos
+              </a>
+            </li>
             <li>Torneio</li>
             <li>Contato</li>
           </ul>
@@ -59,7 +70,9 @@ const Header: FC<HeaderProps> = ({ handleMode }) => {
         </div>
         <Divider className="divider" />
       </Container>
-      <MobileMenu open={mobileMenuOpen} onClose={handleMobileMenu} />
+      <MobileMenu open={mobileMenuOpen} handleOpen={setMobileMenuOpen} />
+
+      {/* <SideModal isActive={mobileMenuOpen} setIsActive={setMobileMenuOpen} /> */}
     </>
   );
 };

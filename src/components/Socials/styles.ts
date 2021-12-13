@@ -1,16 +1,17 @@
 import styled from 'styled-components';
+import { SectionContainer } from '../SectionContainer';
 
-const Container = styled.section`
-	display: flex;
-	justify-content: space-around;
-	max-width: ${({ theme }) => theme.sizes.pageWidth.desktop};
-	width: 100%;
-	margin: 4rem auto;
-	min-height: 45vh;
-	align-items: center;
+const Container = styled(SectionContainer)`
+	.content {
+		display: flex;
+		justify-content: space-around;
+		min-height: 45vh;
+		align-items: center;
+	
+		${({ theme }) => theme.breakpoints.down('md')} {
+			flex-direction: column;
+		}
 
-	${({ theme }) => theme.breakpoints.down('md')} {
-		flex-direction: column;
 	}
 `;
 

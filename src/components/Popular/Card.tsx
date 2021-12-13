@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { Dispatch, FC, SetStateAction } from 'react';
 import { motion } from 'framer-motion';
 import { Typography } from '@mui/material';
 import { CardContainer } from './styles';
@@ -8,7 +8,7 @@ interface CardProps {
 	name: string,
 	thumb: string,
 	area: string,
-	handleChange: (arg0: number | null) => void,
+	handleChange: Dispatch<SetStateAction<number | null>>,
 	author: string,
 }
 const Card: FC<CardProps> = ({

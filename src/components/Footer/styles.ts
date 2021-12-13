@@ -34,11 +34,11 @@ const Container = styled.footer`
 		${({ theme }) => theme.breakpoints.down('md')} {
 			display: flex;
 			flex-direction: column;
-
 			.socials {
 				justify-content: center;
 			}
 			.copyright {
+				text-align: center;
 				justify-content: center;
 			}
 		}

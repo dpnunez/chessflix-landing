@@ -55,7 +55,7 @@ const Hero = () => {
   };
 
   return (
-    <Container>
+    <Container id="inicio">
       <div
         className="content"
         onMouseMove={handleMove}

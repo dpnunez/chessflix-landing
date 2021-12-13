@@ -6,3 +6,4 @@ export * from './Popular';
 export * from './Experience';
 export * from './Footer';
 export * from './SectionContainer';
+export * from './SideModal';

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FC } from 'react';
+import { Dispatch, FC, SetStateAction } from 'react';
 import { LoremIpsum } from 'react-lorem-ipsum';
 import { Typography } from '@mui/material';
 import { ItemContainer } from './styles';
@@ -15,7 +15,7 @@ interface VideoProps {
 interface ItemProps {
 	list: VideoProps[],
 	active: number,
-	handleChange: (_: number | null) => void
+	handleChange: Dispatch<SetStateAction<number | null>>
 }
 
 const Item: FC<ItemProps> = ({

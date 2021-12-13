@@ -7,7 +7,7 @@ import { Container, Social } from './styles';
 const formater = Intl.NumberFormat('en', { notation: 'compact' });
 
 const Socials = () => (
-  <Container className="socials-wrapper">
+  <Container>
     <Social className="social">
       <Typography className="value" variant="h3">
         {formater.format(23800)}
