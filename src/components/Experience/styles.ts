@@ -2,7 +2,8 @@ import { SectionContainer } from 'components/BaseSectionContainer';
 import styled from 'styled-components';
 
 const Container = styled(SectionContainer)`
-	margin-top: 13rem;
+	margin-top: 13rem !important;
+	padding-bottom: 2rem !important;
 	
 	.content { 
 		margin-top: 3rem;

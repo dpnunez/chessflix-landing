@@ -1,3 +1,6 @@
+import { Instagram as InstagramIcon, YouTube as YoutubeIcon, Facebook as FacebookIcon } from '@mui/icons-material';
+import { FC } from 'react';
+
 export interface TeacherType {
 	name: string,
 	image: string,
@@ -9,6 +12,11 @@ export interface TeacherType {
 		instagram?: string,
 		twitch?: string
 	}
+}
+
+export interface SocialType {
+	url: string,
+	icon: FC
 }
 
 export const teachers: TeacherType[] = [
@@ -112,5 +120,20 @@ export const teachers: TeacherType[] = [
       instagram: 'https://www.google.com/',
       twitch: 'https://www.google.com/',
     },
+  },
+];
+
+export const chessFlixSocials = [
+  {
+    url: 'https://google.com.br',
+    icon: InstagramIcon,
+  },
+  {
+    url: 'https://google.com.br',
+    icon: YoutubeIcon,
+  },
+  {
+    url: 'https://google.com.br',
+    icon: FacebookIcon,
   },
 ];

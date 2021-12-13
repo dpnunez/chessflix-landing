@@ -6,7 +6,7 @@ const Container = styled.section`
 	max-width: ${({ theme }) => theme.sizes.pageWidth.desktop};
 	width: 100%;
 	margin: 4rem auto;
-	height: 45vh;
+	min-height: 45vh;
 	align-items: center;
 
 	${({ theme }) => theme.breakpoints.down('md')} {

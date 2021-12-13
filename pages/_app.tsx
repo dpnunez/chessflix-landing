@@ -5,7 +5,7 @@ import { CssBaseline } from '@mui/material';
 import { ThemeProvider } from 'styled-components';
 import { getTheme, GlobalStyle, ThemeMode } from 'theme';
 
-import { Header } from 'components';
+import { Footer, Header } from 'components';
 import { useCallback, useMemo, useState } from 'react';
 import 'styles/shared-layout.css';
 
@@ -25,6 +25,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           <CssBaseline />
           <Header handleMode={handleThemeMode} />
           <Component {...pageProps} />
+          <Footer />
         </ThemeProvider>
       </MuiThemeProvider>
     </>

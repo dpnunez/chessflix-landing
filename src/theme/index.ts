@@ -50,6 +50,10 @@ const getTheme = (mode: ThemeMode = 'dark') => createTheme({
       desktop: '1235px',
     },
   },
+  glassBackground: {
+    dark: 'rgba(20,20,20,.8)',
+    light: 'rgba(255,255,255,.8)',
+  },
   components: {
     MuiButton: {
       defaultProps: {

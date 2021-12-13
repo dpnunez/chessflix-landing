@@ -12,6 +12,10 @@ interface CustomTheme {
 	},
 	images?: {
 		[key: string]: any
+	},
+	glassBackground: {
+		dark: string,
+		light: string
 	}
 }
 declare module '@mui/material/styles' {
