@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
 
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, StyledEngineProvider } from '@mui/material';
 import { ThemeProvider } from 'styled-components';
 import { getTheme, GlobalStyle, ThemeMode } from 'theme';
 
@@ -20,14 +20,16 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <GlobalStyle />
-      <MuiThemeProvider theme={theme}>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <Header handleMode={handleThemeMode} />
-          <Component {...pageProps} />
-          <Footer />
-        </ThemeProvider>
-      </MuiThemeProvider>
+      <StyledEngineProvider injectFirst>
+        <MuiThemeProvider theme={theme}>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Header handleMode={handleThemeMode} />
+            <Component {...pageProps} />
+            <Footer />
+          </ThemeProvider>
+        </MuiThemeProvider>
+      </StyledEngineProvider>
     </>
   );
 };

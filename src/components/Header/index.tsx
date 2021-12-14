@@ -62,7 +62,6 @@ const Header: FC<HeaderProps> = ({ handleMode }) => {
               <a href="#contato">
                 Contato
               </a>
-
             </li>
           </ul>
           <div className="actions">
@@ -76,8 +75,6 @@ const Header: FC<HeaderProps> = ({ handleMode }) => {
         <Divider className="divider" />
       </Container>
       <MobileMenu open={mobileMenuOpen} handleOpen={setMobileMenuOpen} />
-
-      {/* <SideModal isActive={mobileMenuOpen} setIsActive={setMobileMenuOpen} /> */}
     </>
   );
 };
