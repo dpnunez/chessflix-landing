@@ -52,7 +52,7 @@ const Container = styled.div`
 			.video-container {
 				pointer-events: none;
 				z-index: 2;
-				transform: rotateY(10deg) scale(1.2) translateX(40px);
+				transform: rotateY(-10deg) scale(1.2) translateX(40px);
 			}
 
 			.circle {
