@@ -10,6 +10,9 @@ const Container = styled.section`
 
 	.title {
 		margin-bottom: 42px;
+		${({ theme }) => theme.breakpoints.down('md')} {
+			font-size: 2.5rem;
+		}
 	}
 `;
 

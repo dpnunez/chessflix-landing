@@ -40,7 +40,8 @@ const Header: FC<HeaderProps> = ({ handleMode }) => {
         <div className="content">
           <div className="logo">
             <div className="logo-container">
-              <Image src="/logo.png" alt="chessflix logo" layout="fill" />
+
+              <Image src={isNightMode ? '/logo.png' : '/logo_dark.png'} alt="chessflix logo" layout="fill" />
             </div>
           </div>
           <ul className="menu">
@@ -57,7 +58,6 @@ const Header: FC<HeaderProps> = ({ handleMode }) => {
                 Nossos Cursos
               </a>
             </li>
-            <li>Torneio</li>
             <li>
               <a href="#contato">
                 Contato

@@ -11,7 +11,7 @@ const Experience = () => (
         <div className="icon">
           <DevicesIcon color="primary" fontSize="large" />
         </div>
-        <Typography variant="h5" className="title">Multiplataforma</Typography>
+        <Typography variant="h5" className="title-topic">Multiplataforma</Typography>
         <Typography className="subtitle">
           <LoremIpsum avgWordsPerSentence={1} random />
         </Typography>
@@ -20,7 +20,7 @@ const Experience = () => (
         <div className="icon">
           <AssignmentIcon color="primary" fontSize="large" />
         </div>
-        <Typography variant="h5" className="title">Materiais de apoio</Typography>
+        <Typography variant="h5" className="title-topic">Materiais de apoio</Typography>
         <Typography className="subtitle">
           <LoremIpsum avgWordsPerSentence={1} random />
         </Typography>
@@ -29,7 +29,7 @@ const Experience = () => (
         <div className="icon">
           <CameraIcon color="primary" fontSize="large" />
         </div>
-        <Typography variant="h5" className="title">Experiência cinematográfica</Typography>
+        <Typography variant="h5" className="title-topic">Experiência cinematográfica</Typography>
         <Typography className="subtitle">
           <LoremIpsum avgWordsPerSentence={1} random />
         </Typography>

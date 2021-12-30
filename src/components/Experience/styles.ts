@@ -43,7 +43,7 @@ const Container = styled(SectionContainer)`
 					"icon title"
 					"icon subtitle";
 
-				.title {
+				.title-topic {
 					grid-area: title;
 					font-weight: 600;
 				}
@@ -64,6 +64,13 @@ const Container = styled(SectionContainer)`
 				.subtitle {
 					grid-area: subtitle;
 				}
+			}
+		}
+
+		${({ theme }) => theme.breakpoints.down('md')} {
+			display: flex;
+			.asset {
+				display: none;
 			}
 		}
 	}

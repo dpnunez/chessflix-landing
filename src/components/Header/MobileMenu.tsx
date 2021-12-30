@@ -26,12 +26,11 @@ const MobileMenu: FC<MobileMenuProps> = ({ open, handleOpen }) => {
           <ListItemText primary="Nossos Cursos" />
         </ListItem>
       </a>
-      <ListItem button>
-        <ListItemText primary="Torneio" />
-      </ListItem>
-      <ListItem button>
-        <ListItemText primary="Contato" />
-      </ListItem>
+      <a href="#contato" onClick={handleClose}>
+        <ListItem button>
+          <ListItemText primary="Contato" />
+        </ListItem>
+      </a>
     </SideModal>
   );
 };

@@ -24,19 +24,19 @@ const foo: videoType[] = [{
   name: 'Entendendo as estruturas de peões',
   author: 'Evandro Barbosa',
   id: 1,
-  thumb: 'https://images.unsplash.com/photo-1558637845-c8b7ead71a3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8MTYlM0E5fGVufDB8fDB8fA%3D%3D&w=1000&q=80',
+  thumb: 'https://chessflix.com.br/wp-content/uploads/2021/05/Entendendo20as20estruturas20de20peC3B5es20-20GM20Evandro20Barbosa20-20Aula20220-20IntroduC3A7C3A3o.00_00_19_22.Still001.jpg',
   area: 'main',
 }, {
   name: 'Mago de Riga',
   author: 'Luis Paulo Supi',
   id: 2,
-  thumb: 'https://images.unsplash.com/photo-1558637845-c8b7ead71a3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8MTYlM0E5fGVufDB8fDB8fA%3D%3D&w=1000&q=80',
+  thumb: 'https://chessflix.com.br/wp-content/uploads/2021/05/Supi20-20Modulo20220-20Aula20320-20Um20Exemplo20inspirador20do20grande20Mago20de20Riga.00_00_32_00.Still001.jpg',
   area: 'up',
 }, {
   name: 'Introdução ao ataque',
   author: 'GM Yago',
   id: 3,
-  thumb: 'https://images.unsplash.com/photo-1558637845-c8b7ead71a3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8MTYlM0E5fGVufDB8fDB8fA%3D%3D&w=1000&q=80',
+  thumb: 'https://chessflix.com.br/wp-content/uploads/2021/05/Entendendo2520as2520estruturas2520de2520pe25C325B5es2520-2520GM2520Evandro2520Barbosa2520-2520Aula252022520-2520Introdu25C325A725C325A3o.00_09_07_04.Still002.jpg',
   area: 'down',
 }];
 

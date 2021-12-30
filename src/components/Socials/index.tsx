@@ -12,7 +12,7 @@ const Socials = () => (
       <Typography className="value" variant="h3">
         {formater.format(23800)}
       </Typography>
-      <a href="www.google.com" target="_blank">
+      <a href="https://www.instagram.com/gmevandrobarbosa/" target="__blank">
         <Instagram className="insta" />
         Seguidores no Instagram
       </a>
@@ -21,7 +21,7 @@ const Socials = () => (
       <Typography className="value" variant="h3">
         {formater.format(88200)}
       </Typography>
-      <a href="www.google.com" target="_blank">
+      <a href="https://www.youtube.com/c/GMEvandroBarbosa" target="__blank">
         <YouTube className="yout" />
         Inscritos no youtube
       </a>

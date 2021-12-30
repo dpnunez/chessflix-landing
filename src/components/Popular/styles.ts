@@ -11,6 +11,11 @@ const CardContainer = styled.li<{ area: string }>`
 		${({ area }) => area === 'main' && css`
 			height: 500px;
 		`};
+
+
+		img {
+			width: ${({ area }) => (area === 'main' ? '1000px' : '800px')};
+		}
 	}
 
 	color: white;
@@ -44,6 +49,10 @@ const ItemContainer = styled.div<{ area?: 'main' | 'up' | 'down' }>`
 		${({ area }) => area === 'main' && css`
 			height: 500px; 
 		`}
+
+		img {
+			width: 1000px
+		}
 	}
 
 	.content-container {

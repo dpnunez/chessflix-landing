@@ -3,6 +3,7 @@ import {
 } from '@mui/material';
 import { teachers } from 'constantsProject';
 import { Facebook as FacebookIcon, YouTube as YoutubeIcon, Instagram as InstagramIcon } from '@mui/icons-material';
+import { FaTwitch } from 'react-icons/fa';
 import { Card } from './styles';
 import { SectionContainer as Container } from '../SectionContainer';
 
@@ -36,7 +37,7 @@ const Teachers = () => (
 
               {teacher.socials?.twitch && (
               <IconButton target="_blank" href={teacher.socials?.twitch}>
-                <FacebookIcon />
+                <FaTwitch size="20px" />
               </IconButton>
               )}
             </div>

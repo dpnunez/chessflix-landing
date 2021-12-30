@@ -5,7 +5,7 @@ interface ContainerProps {
 }
 
 const Container = styled.header<ContainerProps>`
-	z-index: 2;
+	z-index: 3;
 	position: fixed;
 	width: 100vw;
 	height: ${({ theme }) => theme.sizes.header};

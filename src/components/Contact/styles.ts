@@ -94,6 +94,20 @@ const Container = styled(SectionContainer)`
 			backdrop-filter: saturate(180%) blur(5px);
 		}
 
+		${({ theme }) => theme.breakpoints.down('md')} {
+			display: flex;
+			flex-direction: column;
+
+			form {
+				width: 100%;
+				border-radius: 0 0 20px 20px;
+				padding-left: 0;
+			}
+
+			.info {
+				border-radius: 20px 20px 0 0;
+			}
+		}
 	}
 `;
 
