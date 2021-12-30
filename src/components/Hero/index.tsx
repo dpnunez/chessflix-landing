@@ -8,14 +8,14 @@ const Hero = () => {
   const [fixingPosition, setFixingPosition] = useState<Boolean>(false);
 
   const updateTransform = (x: number, y: number) => {
-    if (videoContainerRef?.current?.style) { videoContainerRef.current.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`; }
+    if (videoContainerRef?.current?.style) { videoContainerRef.current.style.transform = `rotateY(${x}deg) rotateX(${-y}deg) scale(1.2) translateX(40px)`; }
   };
 
   const updateTransition = (time: number = 0) => {
     if (videoContainerRef?.current?.style) {
       if (time) {
         videoContainerRef.current.style.transition = `transform ${time}ms ease`;
-        videoContainerRef.current.style.transform = 'rotateY(0deg);';
+        videoContainerRef.current.style.transform = 'rotateY(0deg) scale(1.2) translateX(40px);';
         return;
       }
       videoContainerRef.current.style.transition = 'unset';
@@ -55,12 +55,15 @@ const Hero = () => {
   };
 
   return (
-    <Container id="inicio">
+    <Container
+      id="inicio"
+      onMouseMove={handleMove}
+      onMouseEnter={handleMouseOn}
+      onMouseLeave={handleMouseOut}
+    >
       <div
         className="content"
-        onMouseMove={handleMove}
-        onMouseEnter={handleMouseOn}
-        onMouseLeave={handleMouseOut}
+
       >
         <div className="text">
           <Typography variant="h1" className="title">
