@@ -40,7 +40,6 @@ const Header: FC<HeaderProps> = ({ handleMode }) => {
         <div className="content">
           <div className="logo">
             <div className="logo-container">
-
               <Image src={isNightMode ? '/logo.png' : '/logo_dark.png'} alt="chessflix logo" layout="fill" />
             </div>
           </div>
@@ -66,7 +65,7 @@ const Header: FC<HeaderProps> = ({ handleMode }) => {
           </ul>
           <div className="actions">
             <NightModeSwitch onClick={handleMode} checked={isNightMode} />
-            <Button onClick={handleMode} className="login-button">Login</Button>
+            <Button target="__blank" href="https://membros.chessflix.com.br/" className="login-button">Login</Button>
             <IconButton className="menu-icon" onClick={handleMobileMenu}>
               <MenuIcon />
             </IconButton>
